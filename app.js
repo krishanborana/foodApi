@@ -7,6 +7,7 @@ window.onload = function()
         e.preventDefault();
         let keyword = this.document.querySelector('.containerForm>form>input[type="search"]').value;
         var URL = `https://api.edamam.com/search?q=${keyword}&app_id=${API_KEY}&app_key=${APPLICATION_KEY}`;
+	console.log(URL);
         if(keyword.length<3 || !keyword.replace(/\s/g, '').length){
         	document.querySelector('.responseDiv').innerHTML = '<h3>Atleast Enter 3 non-space Characters</h3>';
         }
